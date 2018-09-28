@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{287002A6-8F5A-4169-9B96-B18AAB44134B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Covua</RootNamespace>
+    <AssemblyName>Covua</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Blackvariant-Button-Ui-System-Apps-Chess.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllChessman\Hau.cs" />
+    <Compile Include="AllChessman\Ngua.cs" />
+    <Compile Include="AllChessman\Quanco.cs" />
+    <Compile Include="AllChessman\Tot.cs" />
+    <Compile Include="AllChessman\Tuong.cs" />
+    <Compile Include="AllChessman\Vua.cs" />
+    <Compile Include="AllChessman\Xe.cs" />
+    <Compile Include="AppResource\FilesIO.cs" />
+    <Compile Include="AppResource\ImagePath.cs" />
+    <Compile Include="AppResource\SaveFile.cs" />
+    <Compile Include="Chess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chess.Designer.cs">
+      <DependentUpon>Chess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AI.cs" />
+    <Compile Include="Customcontrol\Border\Border.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customcontrol\Border\BorderControlEvent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customcontrol\Border\BorderDesigner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customcontrol\Border\BorderMover.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customcontrol\Border\BorderResizer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customcontrol\SwapImage\Swaper.cs" />
+    <Compile Include="Customform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customform.Designer.cs">
+      <DependentUpon>Customform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppResource\AppImage.cs" />
+    <Compile Include="AppResource\AppPath.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="Note.cs" />
+    <Compile Include="Phong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phong.Designer.cs">
+      <DependentUpon>Phong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statuss\Index.cs" />
+    <Compile Include="Statuss\StatusField.cs" />
+    <Compile Include="Statuss\StatusMethod.cs" />
+    <Compile Include="Statuss\StatusStaticMethod.cs" />
+    <Compile Include="Team.cs" />
+    <Compile Include="TestTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestTools.Designer.cs">
+      <DependentUpon>TestTools.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Chess.resx">
+      <DependentUpon>Chess.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customform.resx">
+      <DependentUpon>Customform.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phong.resx">
+      <DependentUpon>Phong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TestTools.resx">
+      <DependentUpon>TestTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Blackvariant-Button-Ui-System-Apps-Chess.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
